@@ -9,4 +9,4 @@ cloud:
     name: image_bucket
 
 pubsub:
-  subscription: image-subscription
+  subscription: ${IMAGE_SUBSCRIPTION}
