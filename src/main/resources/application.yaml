@@ -1,0 +1,12 @@
+server:
+  port: 8080
+
+persistent:
+  service:
+    address: ${PERSISTENT_SERVICE_ADDRESS}
+cloud:
+  bucket:
+    name: image_bucket
+
+pubsub:
+  subscription: image-subscription
