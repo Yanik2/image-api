@@ -15,7 +15,7 @@ RUN ./gradlew clean build -x test --no-daemon
 
 FROM amazoncorretto:21
 
-RUN apt update && apt install -y jq && rm -rf /var/lib/apt/lists/*
+RUN yum update -y && yum install -y jq && yum clean all
 
 WORKDIR /app
 
