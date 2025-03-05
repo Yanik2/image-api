@@ -5,7 +5,6 @@ import com.google.cloud.spring.pubsub.integration.inbound.PubSubInboundChannelAd
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
-import org.springframework.integration.annotation.IntegrationComponentScan;
 import org.springframework.integration.channel.DirectChannel;
 import org.springframework.messaging.MessageChannel;
 import org.springframework.web.client.RestClient;
