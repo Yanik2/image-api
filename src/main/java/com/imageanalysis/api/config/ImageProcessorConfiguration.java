@@ -2,6 +2,7 @@ package com.imageanalysis.api.config;
 
 import com.google.cloud.spring.pubsub.core.PubSubTemplate;
 import com.google.cloud.spring.pubsub.integration.inbound.PubSubInboundChannelAdapter;
+import com.imageanalysis.api.dto.PubSubMessageDto;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
@@ -25,6 +26,7 @@ public class ImageProcessorConfiguration {
                                                              PubSubTemplate pubSubTemplate) {
         final var adapter = new PubSubInboundChannelAdapter(pubSubTemplate, subscription);
         adapter.setOutputChannel(pubsubChannel);
+        adapter.setPayloadType(PubSubMessageDto.class);
         return adapter;
     }
 
